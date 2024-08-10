@@ -7,6 +7,7 @@ function App() {
         <>
             <Message/>
             <ListGroup/>
+            <ListGroup/>
         </>)
 }
 
