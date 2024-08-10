@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 
-function ListGroup() {
-    const items = [
-        'adrian',
-        'max',
-        'asdf',
-        'Vier'
-    ]
+interface ListGroupProps {
+    heading: string,
+    items:   string[]
+}
+
+function ListGroup(props: ListGroupProps) {
+    const items = props.items;
     const [selectedIndex, setSelectedIndex] = useState(-1)
 
     
@@ -34,7 +34,7 @@ function ListGroup() {
 
     return (
         <>
-            <h1>List Header</h1>
+            <h1>{props.heading}</h1>
             <ul className="list-group">
                 {getEmptyItemsMessage()}
                 {getItems()}

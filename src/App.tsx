@@ -3,11 +3,16 @@ import ListGroup from "./components/ListGroup.tsx";
 
 
 function App() {
+    const items = [
+        'adrian',
+        'max',
+        'asdf',
+        'Vier'
+    ]
     return (
         <>
             <Message/>
-            <ListGroup/>
-            <ListGroup/>
+            <ListGroup heading={"Whatever"} items={items}/>
         </>)
 }
 
