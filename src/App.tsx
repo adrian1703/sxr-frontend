@@ -1,5 +1,6 @@
 import ListGroup from "./components/ListGroup.tsx";
 import SiteHeader from "./components/SiteHeader.tsx";
+import SiteFooter from "./components/SiteFooter.tsx";
 
 
 function App() {
@@ -10,10 +11,14 @@ function App() {
         'Vier'
     ]
     return (
-        <div className="container">
+        <div className="container d-flex flex-column min-vh-100">
             <SiteHeader/>
-            <ListGroup heading={"Whatever"} items={items}/>
-        </div>)
+            <main className="flex-grow-1">
+               <ListGroup heading={"Whatever"} items={items}/>
+            </main>
+            <SiteFooter/>
+        </div>
+    )
 }
 
 export default App;
