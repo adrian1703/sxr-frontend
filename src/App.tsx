@@ -1,5 +1,5 @@
-import Message from './Message.tsx';
 import ListGroup from "./components/ListGroup.tsx";
+import SiteHeader from "./components/SiteHeader.tsx";
 
 
 function App() {
@@ -10,10 +10,10 @@ function App() {
         'Vier'
     ]
     return (
-        <>
-            <Message/>
+        <div className="container">
+            <SiteHeader/>
             <ListGroup heading={"Whatever"} items={items}/>
-        </>)
+        </div>)
 }
 
 export default App;
