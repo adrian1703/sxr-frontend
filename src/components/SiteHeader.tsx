@@ -1,22 +1,28 @@
 import ReactLogo from './../assets/react.svg'
 
-function SiteHeader() {
+export interface Tab {
+    tabName: string
+    path: string
+}
+
+export interface NavbarProp {
+    tabs: Tab[]
+}
+
+function SiteHeader(props: NavbarProp) {
     const appText = "SimpleXRech"
-    const tabHeaders: string[] = [
-        "Home",
-        "Rechnung erstellen"
-    ]
+    const tabs = props.tabs;
 
     const getTabs = () => {
-        return tabHeaders.map(tabHeader =>
-                <a className="nav-link nav-item" href="#">{tabHeader}</a>
+        return tabs.map(tab =>
+                <a className="nav-link nav-item" href={tab.path}>{tab.tabName}</a>
         )
     }
 
     return (
         <header>
             <nav className="navbar navbar-expand-sm navbar-light bg-light">
-                <a className="navbar-brand" href="#">
+                <a className="navbar-brand" href="/home">
                     <img src={ReactLogo} width="30" height="30"
                          className="d-inline-block align-top" alt=""/>
                     {appText}

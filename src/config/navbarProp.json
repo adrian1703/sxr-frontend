@@ -1,0 +1,12 @@
+{
+  "tabs": [
+    {
+      "tabName": "Home",
+      "path": "/home"
+    },
+    {
+      "tabName": "About",
+      "path": "/about"
+    }
+  ]
+}
